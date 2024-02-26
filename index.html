@@ -19,7 +19,13 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-------Animations------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
+
   <body>
     <!---------Header---------------->
     <header class="header">
@@ -64,12 +70,12 @@
         <div class="container">
           <div class="hero-info">
             <h1 class="hero-title">Work at the speed of thought</h1>
-            <p class="hero-text">
+            <p class="hero-text animate__animated animate__flipInX">
               Tools, tutorials, design and innovation experts, all in one place!
               The most intuitive way to imagine your next user experience.
             </p>
             <div class="hero-btn">
-              <button class="btn">Get started</button
+              <button class="btn" data-modal-open>Get started</button
               ><a href="" class="hero-video"
                 ><img
                   src="./img/hero/play_icon.svg"
@@ -432,5 +438,117 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-socials">
+          <a href="" class="logo">
+            <img
+              src="./img/header/logo.svg"
+              alt="Product logo"
+              width="40"
+              height="36"
+            />Product</a
+          >
+          <ul class="socials">
+            <li class="socials-item">
+              <a class="socials-link" href=""
+                ><svg class="socials-icon" width="24" height="24">
+                  <use href="/img/footer/icons.svg#icon-instagram"></use></svg              ></a>
+            </li>
+            <li class="socials-item">
+              <a class="socials-link" href=""
+                ><svg class="socials-icon" width="24" height="24">
+                  <use href="/img/footer/icons.svg#icon-facebook"></use></svg              ></a>
+            </li>
+            <li class="socials-item">
+              <a class="socials-link" href=""
+                ><svg class="socials-icon" width="24" height="24">
+                  <use href="/img/footer/icons.svg#icon-twitter"></use></svg              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="resource">
+          <h3 class="title">Resource</h3>
+          <a href="" class="link">About Us</a>
+          <a href="" class="link">Blog</a>
+          <a href="" class="link">Contact</a>
+          <a href="" class="link">FAQ</a>
+        </div>
+        <div class="stuff">
+          <h3 class="title">Legal Stuff</h3>
+          <a href="" class="link">Disclaimer</a>
+          <a href="" class="link">Financing</a>
+          <a href="" class="link">Privacy Policy</a>
+          <a href="" class="link">Terms of Service</a>
+        </div>
+        <div class="subscribe">
+          <p class="text">
+            Knowing you're always on <br />
+            the best energy deal.
+          </p>
+          <form>
+            <input type="tel" class="" name="phone_number" />
+          </form>
+          <button type="submit" class="btn">Sign up Now</button>
+        </div>
+      </div>
+      <p class="text">Made With Love By Figmaland All Right Reserved</p>
+    </footer>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-btn-icon" width="18" height="18">
+            <use href="/img/icons/close.svg#close"></use>
+          </svg>
+        </button>
+        <p class="form-title">Registration</p>
+        <form class="register-form" name="register_form">
+          <label class="register-form-field"
+            >First name<span class="register-form-group"
+              ><input type="text" class="register-form-input" /><svg
+                class="register-form-icon"
+                width="22"
+                height="22"
+              >
+                <use
+                  href="/img/icons/close.svg#icon-person-black"
+                ></use></svg></span
+          ></label>
+          <label class="register-form-field"
+            >Phone number<span class="register-form-group"
+              ><input type="tel" class="register-form-input" /><svg
+                class="register-form-icon"
+                width="22"
+                height="22"
+              >
+                <use
+                  href="/img/icons/close.svg#icon-phone-black"
+                ></use></svg></span
+          ></label>
+          <label class="register-form-field"
+            >E-mail<span class="register-form-group"
+              ><input type="text" class="register-form-input" /><svg
+                class="register-form-icon"
+                width="22"
+                height="22"
+              >
+                <use
+                  href="/img/icons/close.svg#icon-email-black"
+                ></use></svg></span
+          ></label>
+          <label class="register-agreement"
+            ><input type="checkbox" class="register-checkbox" /><span
+              class="register-terms"
+              >Accept all<a href="" class="register-link"
+                > Terms & Conditions</a
+              ></span
+            ></label
+          >
+          <button type="submit" class="register-form-btn btn">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
