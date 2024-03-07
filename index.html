@@ -486,8 +486,20 @@
             Knowing you're always on <br />
             the best energy deal.
           </p>
-          <form>
-            <input type="tel" class="" name="phone_number" />
+          <form class="footer-form">
+            <input
+              type="tel"
+              class="footer-input"
+              name="phone_number"
+              id="number"
+              placeholder=" "
+            />
+            <label for="number" class="footer-label"
+              >Enter your phone number</label
+            >
+            <svg class="footer-form-icon" width="16" height="24">
+              <use href="/img/footer/icons.svg#icon-phone"></use>
+            </svg>
           </form>
           <button type="submit" class="btn">Sign up Now</button>
         </div>
@@ -540,8 +552,8 @@
           <label class="register-agreement"
             ><input type="checkbox" class="register-checkbox" /><span
               class="register-terms"
-              >Accept all<a href="" class="register-link"
-                > Terms & Conditions</a
+              >Accept all<a href="" class="register-link">
+                Terms & Conditions</a
               ></span
             ></label
           >
