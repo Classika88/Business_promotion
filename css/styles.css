@@ -204,14 +204,15 @@ body.no-scroll {
 .feature {
   margin-bottom: 50px;
   padding-bottom: 7px;
-  background-color: linear-gradient(
-    180deg,
-    #ededed 0.35%,
-    rgba(255, 255, 255, 0) 99.63%
-  );
+  
 }
 .feature .container {
   text-align: center;
+  /* background-color: linear-gradient(
+    180deg,
+    #ededed 0.35%,
+    rgba(255, 255, 255, 0) 99.63%
+  ); */
 }
 .feature .title {
   max-width: 539px;
@@ -824,7 +825,7 @@ link:not(:last-child) {
   line-height: 1.5;
 }
 .footer-form {
-  position: relative;
+ 
 }
 .footer-input {
   padding: 12px 10px 12px 42px;
@@ -833,6 +834,19 @@ link:not(:last-child) {
   width: 325px;
 }
 .footer-label {
+  position: relative;
+  display: block;
+  
+}
+.footer-input:focus {
+  outline-color: var(--accent-bg-clr);
+}
+.footer-label:focus-within > .footer-label-name,
+.footer-input:not(:placeholder-shown) + .footer-label-name {
+  transform: translateY(-50px);
+}
+
+.footer-label-name {
   color: var(--accent-txt-clr);
   font-family: var(--main-font);
   line-height: 1.75;
@@ -841,14 +855,6 @@ link:not(:last-child) {
   left: 42px;
   transform: translateY(-50%);
   transition: transform 200ms linear;
-}
-.footer-input:focus {
-  outline-color: var(--accent-bg-clr);
-}
-
-.footer-input:focus + .footer-label,
-.footer-input:not(:placeholder-shown) + .footer-label {
-  transform: translateY(-50px);
 }
 .footer-form-icon {
   position: absolute;
