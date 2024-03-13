@@ -204,15 +204,27 @@ body.no-scroll {
 .feature {
   margin-bottom: 50px;
   padding-bottom: 7px;
-  
+  position: relative;
 }
 .feature .container {
   text-align: center;
-  /* background-color: linear-gradient(
-    180deg,
-    #ededed 0.35%,
-    rgba(255, 255, 255, 0) 99.63%
-  ); */
+ }
+.feature .container::after {
+  content: "";
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgb(237, 237, 237) 0.658%,
+    rgba(255, 255, 255, 0) 78.748%
+  );
+  z-index: -1;
 }
 .feature .title {
   max-width: 539px;
@@ -222,44 +234,31 @@ body.no-scroll {
   display: flex;
   gap: 30px;
   margin-bottom: 50px;
-  outline: 2px solid red;
-  /* background-color: linear-gradient(
-    180deg,
-    #ededed 0.35%,
-    rgba(255, 255, 255, 0) 99.63%
-  ); */
-}
+  }
 .feature-item {
   text-align: left;
   max-width: 255px;
 }
 
-.icon-green {
-  background-image: url(/img/feature/icon-1.svg);
-  width: 54px;
-  height: 54px;
-  margin-bottom: 26px;
-}
-.icon-blue {
-  background-image: url(/img/feature/icon-2.svg);
-  width: 54px;
-  height: 54px;
-  margin-bottom: 26px;
-}
-
-.icon-purple {
-  background-image: url(/img/feature/icon-3.svg);
-  width: 54px;
-  height: 54px;
-  margin-bottom: 26px;
-}
-
-.icon-red {
-  background-image: url(/img/feature/icon-4.svg);
-  width: 54px;
-  height: 54px;
-  margin-bottom: 26px;
-}
+  .feature .mini-title::before {
+    content: '';
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 26px;
+  }
+  .green::before {
+    background-image: url(/img/feature/icon-1.svg);
+  }
+  .blue::before {
+    background-image: url(/img/feature/icon-2.svg);
+  }
+  .purple::before {
+    background-image: url(/img/feature/icon-3.svg);
+  }
+  .red::before {
+    background-image: url(/img/feature/icon-4.svg);
+  }
 
 .feature .mini-title {
   font-size: 22px;
@@ -408,15 +407,31 @@ body.no-scroll {
 |=========================
 */
 .staff {
-  /* padding-top: 50px ; */
   outline: 2px solid red;
+  position: relative;
 }
 .staff .container {
   text-align: center;
   margin-bottom: 100px;
   padding-top: 50px;
-
   outline: 2px solid red;
+}
+.staff .container::after {
+  content: "";
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgb(237, 237, 237) 0.608%,
+    rgba(255, 255, 255, 0) 82.155%
+  );
+  z-index: -1;
 }
 .staff .title {
   margin-bottom: 25px;
@@ -825,7 +840,6 @@ link:not(:last-child) {
   line-height: 1.5;
 }
 .footer-form {
- 
 }
 .footer-input {
   padding: 12px 10px 12px 42px;
@@ -836,7 +850,6 @@ link:not(:last-child) {
 .footer-label {
   position: relative;
   display: block;
-  
 }
 .footer-input:focus {
   outline-color: var(--accent-bg-clr);
@@ -1032,4 +1045,76 @@ link:not(:last-child) {
 .register-form-btn {
   display: block;
   margin: 20px auto;
+}
+/**
+|=========================
+| Customers page
+|=========================
+*/
+/**
+|=========================
+| Clients
+|=========================
+*/
+
+.clients {
+  margin: 100px auto;
+}
+.clients .container {
+ 
+  text-align: center;
+
+}
+.clients .title {
+  margin-bottom: 50px;
+  font-size: 40px;
+
+
+}
+.clients-group {
+  align-items: center;
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+  padding: 16px 0px;
+}
+.clients-logo {
+}
+/**
+|=========================
+| Choose Product
+|=========================
+*/
+.choose-product {
+}
+.container {
+}
+.title {
+}
+.choose-list {
+  display: flex;
+  gap: 30px;
+}
+.choose-item {
+}
+.pre-title {
+}
+.text {
+}
+
+.choose-item .pre-title::before {
+  content: '';
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 26px;
+}
+.green::before {
+  background-image: url(/img/feature/icon-1.svg);
+}
+.blue::before {
+  background-image: url(/img/feature/icon-2.svg);
+}
+.purple::before {
+  background-image: url(/img/feature/icon-3.svg);
 }
