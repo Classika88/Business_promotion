@@ -145,6 +145,7 @@ body.no-scroll {
 
 .hero-info {
   max-width: 465px;
+  text-align: left;
 }
 .hero-title {
   font-size: 40px;
@@ -737,6 +738,7 @@ body.no-scroll {
   outline: 2px solid red;
   padding-top: 45px;
   padding-bottom: 46px;
+  text-align: left;
   /* display: inline-block;
   align-items: center; */
 }
@@ -765,6 +767,7 @@ body.no-scroll {
 */
 .footer .container {
   display: flex;
+  text-align-last: left;
 }
 .footer .logo {
   margin-bottom: 18px;
@@ -832,6 +835,7 @@ link:not(:last-child) {
 .subscribe {
   /* max-width: 325px; */
   margin-bottom: 16px;
+  
 }
 .subscribe .text {
   margin-bottom: 30px;
@@ -1086,28 +1090,48 @@ link:not(:last-child) {
 |=========================
 */
 .choose-product {
+  background-color: rgb(245, 245, 245);
+  padding: 24px 145px 68px;
+  margin-bottom: 100px;
 }
-.container {
+.choose-product .container {
+  
 }
-.title {
+.choose-product .title {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 .choose-list {
   display: flex;
   gap: 30px;
 }
 .choose-item {
+border: 1px solid rgb(222, 222, 222);
+border-radius: 10px;
+padding: 32px 28px;
+text-align: center;
 }
-.pre-title {
+.choose-product .pre-title {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.1px;
+  margin-bottom: 16px;
+  line-height: 1.37;
 }
-.text {
+.choose-item .text {
+  line-height: 1.68;
+  letter-spacing: 0.2px;
 }
-
 .choose-item .pre-title::before {
   content: '';
   display: block;
   width: 54px;
   height: 54px;
-  margin-bottom: 26px;
+  margin: 0px auto 32px auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+
 }
 .green::before {
   background-image: url(/img/feature/icon-1.svg);
@@ -1118,3 +1142,156 @@ link:not(:last-child) {
 .purple::before {
   background-image: url(/img/feature/icon-3.svg);
 }
+/**
+|=========================
+| Product Work
+|=========================
+*/
+.product-work {
+}
+.product-work .container {
+  text-align: center;
+}
+.product-work .title {
+   margin-bottom: 73px;
+}
+.product-work-list {
+}
+.product-work-item {
+display: flex;
+gap: 89px;
+
+}
+.product-work-item {
+  max-width: 1027px;
+}
+.product-work-item:not(:last-child) {
+  margin-bottom: 100px;
+}
+.work-wrap {
+  padding: 34px 0px;
+}
+.product-work .pre-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.product-work .mini-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.product-work .text {
+
+}
+.product-work .btn {
+  padding: 11px 18px;
+  margin: 78px auto 115px;
+  font-size: 18px;
+  line-height: 1.22;
+ 
+}
+
+/**
+|=========================
+| Join
+|=========================
+*/
+.join {
+  background: linear-gradient(
+    180deg,
+    rgb(245,245,245),
+    rgba(245, 245, 245, 0));
+  z-index: -1;
+  margin-bottom: 150px;
+}
+.container {
+  padding: 35px 0px 45px;
+  text-align: center;
+}
+.join .title {
+  margin-bottom: 93px;
+}
+.join-list {
+  display: flex;
+  gap: 227px;
+  justify-content: center;
+}
+.join-item {
+}
+.join .mini-title::before {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 27px;
+  
+}
+.join .red::before {
+  background-image: url(/img/customers/join/join-red.svg);
+}
+.join .blue::before {
+  background-image: url(/img/customers/join/join-blue.svg);
+}
+.join .mini-title {
+  font-weight: 500;
+  line-height: 1.16;
+  margin-bottom: 16px;
+}
+.join .pre-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.78;
+}
+.join .after-title {
+  font-weight: 500;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+/**
+|=========================
+| Promo 2
+|=========================
+*/
+.promo {
+}
+.promo .container {
+  outline: 2px solid red;
+  max-width: 968px;
+  border-radius: 32px;
+  background-color: var(--accent-bg-clr);
+  display: flex;
+  gap: 10px;
+  padding: 4px 46px 10px 51px;
+  margin-bottom: 100px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.promo-wrap {
+  outline: 2px solid red;
+  padding-top: 45px;
+  padding-bottom: 46px;
+  text-align: left;
+  /* display: inline-block;
+  align-items: center; */
+}
+.promo .title {
+  color: var(--light-txt-clr);
+  font-weight: 600;
+  margin-bottom: 46px;
+}
+.promo-wrap .btn {
+  color: var(--accent-txt-clr);
+  background-color: var(--main-bg-clr);
+  /* max-width: 150px;
+  min-height: 50px; */
+  padding: 10px 34px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.promo-img {
+  /* width: 351px;
+  height: 331px; */
+}
+/**
