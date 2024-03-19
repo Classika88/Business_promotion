@@ -209,6 +209,7 @@ body.no-scroll {
 }
 .feature .container {
   text-align: center;
+  padding-bottom: 43px;
  }
 .feature .container::after {
   content: "";
@@ -517,6 +518,11 @@ body.no-scroll {
   padding: 20px 27px 40px;
   margin-bottom: 45px;
 }
+.news-item:hover .mini-title,
+.news-item:focus-within .mini-title {
+  color: var(--accent-txt-clr);
+}
+
 .news-item .text {
   line-height: 1.75;
   font-weight: 400;
@@ -530,6 +536,7 @@ body.no-scroll {
   font-size: 24px;
   line-height: 1.67;
 }
+
 .pagination {
   margin: 0 auto;
 }
@@ -1170,6 +1177,7 @@ gap: 89px;
 }
 .work-wrap {
   padding: 34px 0px;
+  text-align: left;
 }
 .product-work .pre-title {
   text-transform: uppercase;
@@ -1206,7 +1214,7 @@ gap: 89px;
   z-index: -1;
   margin-bottom: 150px;
 }
-.container {
+.join .container {
   padding: 35px 0px 45px;
   text-align: center;
 }
@@ -1295,3 +1303,120 @@ gap: 89px;
   height: 331px; */
 }
 /**
+/**
+|=========================
+| Pricing
+|=========================
+*/
+.pricing {
+}
+.pricing .container {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.pricing .title {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.pricing .text {
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.pricing .text-breaf {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  line-height: 2.5;
+  margin-bottom: 16px;
+}
+
+.pricing-list {
+  display: flex;
+  gap: 72px;
+}
+
+.pricing-item {
+  flex-basis: calc((100% - 2 * 72px / 3));
+  padding: 32px 71px;
+  border-radius: 8px;
+  background: var(--main-bg-clr);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-item:hover,
+.pricing-item:active {
+  border-radius: 8px;
+  background: var(--accent-bg-clr);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  color: var(--light-txt-clr);
+}
+
+.pricing-item .text-pricing {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-item > .text {
+  margin-bottom: 16px;
+}
+
+.text-pricing .cost {
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.32;
+  margin-right: 7px;
+  color: var(--accent-bg-clr);
+}
+
+.pricing-item:hover .cost {
+  color: var(--light-txt-clr);
+}
+
+.pricing-item:hover .symbol {
+  color: var(--light-txt-clr);
+}
+
+.pricing .text-symbol {
+  text-align: left;
+}
+
+.text-symbol .symbol {
+  margin-bottom: 4px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  color: var(--accent-bg-clr);
+}
+
+.text-symbol .period {
+  font-family: Montserrat;
+  line-height: 1.19;
+  font-weight: 400;
+  color: #afafaf;
+}
+
+.pricing-item:hover .period {
+  color: #e0e0e0;
+}
+
+.mini-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.pricing-item > .pricing-btn {
+  margin-top: 30px;
+}
+
+.pricing-item:hover .pricing-btn {
+  background-color: var(--main-bg-clr);
+  color: var(--accent-txt-clr);
+}
+/**
+|=========================
+| Enterprise
+|=========================
+*/
+
